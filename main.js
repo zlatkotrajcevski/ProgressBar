@@ -1,4 +1,4 @@
-var pic, loadingText, tweenB;
+var pic, loadingText;
 var GameState = {
 	preload: function(){
 		this.load.image('background', 'grafiki/pozadina.png');
@@ -20,7 +20,6 @@ var GameState = {
     console.log(cropRect);
         
     var tween = game.add.tween(cropRect).from( { width: pic.width}, 10000, Phaser.Easing.Linear.Out);
-    tweenB = game.add.tween(cropRect).to( { width: pic.width}, 10000, Phaser.Easing.Linear.Out);
     
         
     pic.crop(cropRect);
